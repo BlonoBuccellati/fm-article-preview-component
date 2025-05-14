@@ -5,6 +5,7 @@ import { useState } from "react";
 import { iconShare } from "@/assets";
 import { avatar } from "@/assets";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
 
 import ShareContent from "./share-content";
 
@@ -36,9 +37,16 @@ const UserProfile = () => {
       <UserInfo />
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="z-10 min-h-400 min-w-400 rounded-full bg-gray-200"
+        className={cn(
+          "z-10 min-h-400 min-w-400 rounded-full bg-gray-200",
+          open && "bg-gray-500",
+        )}
       >
-        <Image src={iconShare} alt="share icons" className="mx-auto" />
+        <Image
+          src={iconShare}
+          alt="share icons"
+          className={cn("mx-auto", open && "dark:invert")}
+        />
       </button>
       {open && (
         // bottom-0, left-0で固定
