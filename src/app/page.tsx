@@ -1,3 +1,11 @@
+import UserCard from "@/components/user-card";
+
 export default function Home() {
-  return <div>test</div>;
+  return (
+    <article>
+      <div className="mt-800">
+        <UserCard />
+      </div>
+    </article>
+  );
 }
