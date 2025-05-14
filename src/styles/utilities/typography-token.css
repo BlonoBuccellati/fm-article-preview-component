@@ -1,0 +1,28 @@
+@utility typo-1 {
+  font-family: var(--font-manrepo);
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.25px;
+  font-weight: var(--font-weight-bold);
+}
+@utility typo-2-medium {
+  font-family: var(--font-manrepo);
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.12px;
+  font-weight: var(--font-weight-medium);
+}
+@utility typo-2-bold {
+  font-family: var(--font-manrepo);
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.12px;
+  font-weight: var(--font-weight-bold);
+}
+@utility typo-3-overline {
+  font-family: var(--font-manrepo);
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: var(--font-weight-medium);
+}

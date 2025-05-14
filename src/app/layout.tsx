@@ -1,11 +1,18 @@
+import "@/styles/globals.css";
 import type { Metadata } from "next";
-import "@styles/globals.css";
+import { Manrope } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Article preview component",
   description: "Article preview component of Frontend Mentor Solution",
   icons: "./favicon-32x32.png",
 };
+
+const manrepo = Manrope({
+  variable: "--font-manrepo",
+  subsets: ["latin"],
+  weight: ["500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -14,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`${manrepo.variable} antialiased`}>{children}</body>
     </html>
   );
 }
