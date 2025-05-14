@@ -4,6 +4,12 @@
 @import "./utilities/typography-token.css";
 @import "./shadcn.css";
 
+@utility triangle {
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid var(--color-gray-900);
+}
+
 body {
   @apply bg-gray-200;
   font-family: var(--font-manrepo), Arial, Helvetica, sans-serif;

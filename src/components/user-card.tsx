@@ -21,9 +21,13 @@ const TextContents = () => {
 };
 const UserCard = () => {
   return (
-    <section className="mx-auto max-w-5/6 rounded-[10px] bg-white">
+    <section className="tablet:flex tablet:max-desktop:max-w-[608px] desktop:max-w-[730px] mx-auto max-w-5/6 rounded-[10px] bg-white">
       {/* heroImage */}
-      <Image alt="image" src={drawers} className="rounded-t-[10px]" />
+      <Image
+        alt="image"
+        src={drawers}
+        className="tablet:rounded-t-none tablet:rounded-l-[10px] tablet:max-w-[229px] rounded-t-[10px]"
+      />
       <div className="space-y-600">
         <TextContents />
         {/* avatar */}

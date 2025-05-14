@@ -42,7 +42,7 @@ const UserProfile = () => {
       </button>
       {open && (
         // bottom-0, left-0で固定
-        <ShareContent className="absolute bottom-0 left-0 w-full rounded-b-lg p-400" />
+        <ShareContent className="tablet:left-[55%] tablet:w-max tablet:py-200 tablet:rounded-xl tablet:bottom-[130%] absolute bottom-0 left-0 w-full rounded-b-lg p-400" />
       )}
     </div>
   );

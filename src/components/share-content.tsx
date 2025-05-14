@@ -16,6 +16,7 @@ const ShareContent = ({ className }: { className?: string }) => {
       <a href="#">
         <Image alt="pinterest icon" src={iconPinterest} />
       </a>
+      <div className="tablet:block triangle absolute -bottom-[14px] left-1/2 mx-auto hidden h-200 w-200 -translate-x-1/2" />
     </div>
   );
 };
