@@ -1,9 +1,8 @@
 import avatar from "@/assets/images/avatar-michelle.jpg";
 import drawers from "@/assets/images/drawers.jpg";
-import iconFeedback from "@/assets/tooltip/icon-facebook.svg";
-import iconPinterest from "@/assets/tooltip/icon-pinterest.svg";
-import iconShare from "@/assets/tooltip/icon-share.svg";
-import iconTwitter from "@/assets/tooltip/icon-twitter.svg";
-
+import IconFacebook from "@/assets/tooltip/icon-facebook.svg";
+import IconPinterest from "@/assets/tooltip/icon-pinterest.svg";
+import IconShare from "@/assets/tooltip/icon-share.svg";
+import IconTwitter from "@/assets/tooltip/icon-twitter.svg";
 export { avatar, drawers };
-export { iconFeedback, iconPinterest, iconShare, iconTwitter };
+export { IconShare, IconFacebook, IconPinterest, IconTwitter };

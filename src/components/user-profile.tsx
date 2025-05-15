@@ -1,8 +1,7 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 
-import { iconShare } from "@/assets";
+import { IconShare } from "@/assets";
 import { avatar } from "@/assets";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
@@ -42,10 +41,10 @@ const UserProfile = () => {
           open && "bg-gray-500",
         )}
       >
-        <Image
-          src={iconShare}
-          alt="share icons"
-          className={cn("mx-auto", open && "dark:invert")}
+        <IconShare
+          className={cn("mx-auto", open ? "text-white" : "text-gray-500")}
+          aria-label="share icon"
+          role="img"
         />
       </button>
       {open && (
