@@ -13,10 +13,10 @@ const ARTICLE: ArticleProps = {
 
 export default function Home() {
   return (
-    <article>
+    <main>
       <div className="my-800">
         <PostCard article={ARTICLE} />
       </div>
-    </article>
+    </main>
   );
 }
