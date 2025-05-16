@@ -1,24 +1,5 @@
-"use client";
-import { useState } from "react";
-
-import { IconShare } from "@/assets";
 import { avatar } from "@/assets";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
-
-import ShareContent from "./share-content";
-
-const UserInfo = () => {
-  return (
-    <div className="flex items-center space-x-200">
-      <CardAvatar />
-      <div>
-        <div className="typo-2-bold text-gray-900">Michelle Appleton</div>
-        <div className="typo-2-medium text-gray-400">28 Jun 2020</div>
-      </div>
-    </div>
-  );
-};
 
 const CardAvatar = () => {
   return (
@@ -29,28 +10,18 @@ const CardAvatar = () => {
   );
 };
 
-const UserProfile = () => {
-  const [open, setOpen] = useState(false);
+interface UserProfileProps {
+  userName: string;
+  articleDate: string;
+}
+const UserProfile = ({ userName, articleDate }: UserProfileProps) => {
   return (
-    <div className="relative flex items-center justify-between px-400 pb-300">
-      <UserInfo />
-      <button
-        onClick={() => setOpen((prev) => !prev)}
-        className={cn(
-          "z-10 min-h-400 min-w-400 rounded-full bg-gray-200",
-          open && "bg-gray-500",
-        )}
-      >
-        <IconShare
-          className={cn("mx-auto", open ? "text-white" : "text-gray-500")}
-          aria-label="share icon"
-          role="img"
-        />
-      </button>
-      {open && (
-        // bottom-0, left-0で固定
-        <ShareContent className="tablet:left-[55%] tablet:w-max tablet:py-200 tablet:rounded-xl tablet:bottom-[130%] absolute bottom-0 left-0 w-full rounded-b-lg p-400" />
-      )}
+    <div className="flex items-center space-x-200">
+      <CardAvatar />
+      <div>
+        <div className="typo-2-bold text-gray-900">{userName}</div>
+        <div className="typo-2-medium text-gray-400">{articleDate}</div>
+      </div>
     </div>
   );
 };
