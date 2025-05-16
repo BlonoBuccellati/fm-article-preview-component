@@ -1,3 +1,4 @@
+import { avatar } from "@/assets";
 import PostCard from "@/components/post-card";
 import ArticleProps from "@/types/article";
 
@@ -8,7 +9,7 @@ const ARTICLE: ArticleProps = {
     "Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.",
   userName: "Michelle Appleton",
   date: "28 Jun 2020",
-  userAvatar: "",
+  userAvatar: avatar,
 };
 
 export default function Home() {
