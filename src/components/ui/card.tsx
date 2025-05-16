@@ -4,10 +4,7 @@ function Card({ className, ...props }: React.ComponentProps<"article">) {
   return (
     <article
       data-slot="card"
-      className={cn(
-        "tablet:max-desktop:max-w-[608px] desktop:max-w-[730px] rounded-[10px] bg-white",
-        className,
-      )}
+      className={cn("rounded-[10px] bg-white", className)}
       {...props}
     />
   );
@@ -31,7 +28,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"h1">) {
   return (
     <h1
       data-slot="card-title"
-      className={cn((className = "className=typo-1 text-gray-900"), className)}
+      className={cn("typo-1 text-gray-900", className)}
       {...props}
     />
   );

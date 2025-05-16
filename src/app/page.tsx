@@ -13,10 +13,8 @@ const ARTICLE: ArticleProps = {
 
 export default function Home() {
   return (
-    <main>
-      <div className="my-800">
-        <PostCard article={ARTICLE} />
-      </div>
+    <main className="flex min-h-screen items-center">
+      <PostCard article={ARTICLE} />
     </main>
   );
 }

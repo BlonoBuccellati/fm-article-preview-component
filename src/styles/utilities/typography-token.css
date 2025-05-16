@@ -16,7 +16,7 @@
   font-family: var(--font-manrepo);
   font-size: 13px;
   line-height: 140%;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.0012em;
   font-weight: var(--font-weight-bold);
 }
 @utility typo-3-overline {
