@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 import { drawers } from "@/assets";
-import { ShareButton, SharePopover } from "@/components/share-popover";
+import ShareButton from "@/components/share-button";
+import SharePopover from "@/components/share-popover";
 import {
   Card,
   CardContent,
@@ -35,7 +36,6 @@ const PostCardFooter = ({ article }: { article: ArticleProps }) => {
   const togglePopover = () => setOpen((prev) => !prev);
 
   return (
-    //
     <CardFooter className="relative flex items-center justify-between px-400 pb-300">
       <UserProfile
         userName={article.userName}
