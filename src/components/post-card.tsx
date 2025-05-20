@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 import { drawers } from "@/assets";
-import { SharePopover, ShareButton } from "@/components/share-popover";
+import { ShareButton, SharePopover } from "@/components/share-popover";
 import {
   Card,
   CardContent,
@@ -29,10 +29,13 @@ const PostCardContent = ({
     </CardContent>
   );
 };
+
 const PostCardFooter = ({ article }: { article: ArticleProps }) => {
   const [open, setOpen] = useState(false);
   const togglePopover = () => setOpen((prev) => !prev);
+
   return (
+    //
     <CardFooter className="relative flex items-center justify-between px-400 pb-300">
       <UserProfile
         userName={article.userName}
@@ -40,11 +43,17 @@ const PostCardFooter = ({ article }: { article: ArticleProps }) => {
         avatar={article.userAvatar}
       />
       {/* share button とpopover*/}
-      <ShareButton open={open} onClick={togglePopover} />
-      {open && (
-        // bottom-0, left-0で固定
-        <SharePopover className="tablet:left-[55%] tablet:w-max tablet:bottom-[130%] absolute bottom-0 left-0 w-full rounded-b-lg" />
-      )}
+      <div className="tablet:relative">
+        <ShareButton
+          open={open}
+          onClick={togglePopover}
+          className="relative z-40"
+        />
+        {open && (
+          // SharePopoverは、CardFooterが親の場合と、ShareButtonが親の場合がある。
+          <SharePopover className="tablet:left-1/2 tablet:-translate-x-1/2 tablet:w-max tablet:bottom-[160%] absolute bottom-0 left-0 z-0 w-full rounded-b-lg" />
+        )}
+      </div>
     </CardFooter>
   );
 };
