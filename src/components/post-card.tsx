@@ -15,6 +15,20 @@ import {
 import UserProfile from "@/components/user-profile";
 import ArticleProps from "@/types/article";
 
+const PostCardContent = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
+  return (
+    <CardContent className="space-y-300">
+      <CardTitle>{title}</CardTitle>
+      <CardDescription>{description}</CardDescription>
+    </CardContent>
+  );
+};
 const PostCardFooter = ({ article }: { article: ArticleProps }) => {
   const [open, setOpen] = useState(false);
   const togglePopover = () => setOpen((prev) => !prev);
@@ -45,10 +59,10 @@ const PostCard = ({ article }: { article: ArticleProps }) => {
         className="tablet:rounded-t-none tablet:rounded-l-[10px] tablet:max-w-[clamp(14.313rem,10.67rem+7.59vw,17.5rem)] tablet:max-h-none tablet:object-fill max-h-[194px] rounded-t-[10px] object-cover [object-position:50%_22%]"
       />
       <div className="space-y-600">
-        <CardContent className="space-y-300">
-          <CardTitle>{article.title}</CardTitle>
-          <CardDescription>{article.description}</CardDescription>
-        </CardContent>
+        <PostCardContent
+          title={article.title}
+          description={article.description}
+        />
         <PostCardFooter article={article} />
       </div>
     </Card>
