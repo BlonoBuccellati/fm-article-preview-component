@@ -47,6 +47,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [BlonoBuccellati](https://github.com/BlonoBuccellati)
+- GitHub - [BlonoBuccellati](https://github.com/BlonoBuccellati)
 - Frontend Mentor - [@BlonoBuccellati](https://www.frontendmentor.io/profile/BlonoBuccellati)
 - zenn - [@bln](https://zenn.dev/bln)
