@@ -42,6 +42,8 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [tailwindcss](https://tailwindcss.com/) - utility-first CSS framework
 - [node.js](https://nodejs.org/ja) - Runtime & Build Tools
+- [shadcn/ui](https://ui.shadcn.com/) - A component collection built on Radix and Tailwind
+- [class-variance-authority (cva)](https://cva.style/docs) - A library for conditionally managing Tailwind utility classes
 
 ## Author
 
